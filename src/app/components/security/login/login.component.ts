@@ -30,8 +30,6 @@ export class LoginComponent implements OnInit {
   login() {
     this.message  = '';
     this.userService.login(this.user).subscribe((userAuthentication: CurrentUser) => {
-      console.log('userAuthentication-->  ',userAuthentication);
-      console.log('this.shared-->  ',this.shared);
       this.shared.token = userAuthentication.token;
       this.shared.user = userAuthentication.user;
       this.shared.user.profile = this.shared.user.profile.substring(5);

@@ -18,11 +18,10 @@ export class SharedService {
   }
 
   public static getInstance() {
-    if  (this.instance = null) {
+    if  (this.instance == null) {
       this.instance = new SharedService();
-    } else {
-      return this.instance;
-    }
+    } 
+    return this.instance;
   }
 
   isLoggedIn(): boolean {
